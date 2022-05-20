@@ -487,5 +487,5 @@ def update_mobile_ad_src():
 
 if __name__ == "__main__":
         # create_project(project_name='test_app_with_date',expired='2020-01-01')
-        create_project(project_name='test_me')
+        create_project(project_name='hozon_dev')
         update_mobile_ad_src()

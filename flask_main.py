@@ -89,10 +89,10 @@ app.add_url_rule('/usergroups/apply_temples_list', view_func=apply_temples_list,
 app.add_url_rule('/usergroups/show_noti_group', view_func=show_noti_group, methods=['POST'])#查询消息群组
 app.add_url_rule('/usergroups/show_noti_detial', view_func=show_noti_detial, methods=['POST'])#查询消息群组详情
 app.add_url_rule('/usergroups/manual_send', view_func=manual_send, methods=['POST'])#手动推送消息群组
-# app.add_url_rule('/create_mobile_ad_link', view_func=create_mobile_ad_link, methods=['POST'])#手动推送单条消息
+app.add_url_rule('/create_mobile_ad_link', view_func=create_mobile_ad_link, methods=['POST'])#手动推送单条消息              原项目是注释掉这行
 app.add_url_rule('/usergroups/disable_single_noti', view_func=disable_single, methods=['POST'])#禁用单条消息
 app.add_url_rule('/usergroups/show_scheduler_jobs', view_func=show_scheduler_jobs, methods=['POST'])#查询分群任务列表
-# app.add_url_rule('/create_mobile_ad_link', view_func=create_mobile_ad_link, methods=['POST'])#手动插入推送消息
+app.add_url_rule('/create_mobile_ad_link', view_func=create_mobile_ad_link, methods=['POST'])#手动插入推送消息              原项目是注释掉这行
 app.add_url_rule('/usergroups/create_scheduler_jobs_manual',view_func=create_scheduler_jobs_manual, methods=['POST'])#手动开始执行分群
 app.add_url_rule('/usergroups/create_manual_temple_noti',view_func=create_manual_temple_noti, methods=['POST'])#手动创建模板消息
 app.add_url_rule('/usergroups/create_manual_non_temple_noti',view_func=create_manual_non_temple_noti, methods=['POST'])#手动创建非模板消息
@@ -111,4 +111,4 @@ app.add_url_rule('/access_control/access_control_detail',view_func=access_contro
 app.add_url_rule('/access_control/update_access_status',view_func=update_access_status, methods=['POST','GET'])#修改详情
 
 if __name__ == '__main__':
-    app.run(threaded=True, host='0.0.0.0', port=8000)  # 默认不填写的话，是5000端口；
+    app.run(threaded=True, host='0.0.0.0', port=7999)  # 默认不填写的话，是5000端口；
